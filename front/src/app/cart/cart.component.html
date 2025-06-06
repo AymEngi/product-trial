@@ -1,0 +1,5 @@
+<h2>Panier</h2>
+<div *ngFor="let item of cartItems">
+  {{ item.name }} - {{ item.price | currency }}
+  <button (click)="removeFromCart(item.id)">Supprimer</button>
+</div>

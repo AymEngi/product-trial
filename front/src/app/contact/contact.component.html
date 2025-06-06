@@ -1,0 +1,6 @@
+<form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+  <input type="email" name="email" [(ngModel)]="email" required />
+  <textarea name="message" [(ngModel)]="message" required maxlength="300"></textarea>
+  <button type="submit" [disabled]="!contactForm.form.valid">Envoyer</button>
+</form>
+<p *ngIf="messageSent">La demande de contact a été envoyée avec succès!</p>
